@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
 gem 'rails', '3.2.13'
 gem 'sqlite3'
 group :assets do
@@ -8,31 +7,20 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 2.3.2.2'
-gem 'cancan'
-gem 'devise'
-gem 'figaro'
-gem 'rolify'
-gem 'simple_form'
-gem 'therubyracer', :platform=>:ruby
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
-  gem 'hub', :require=>nil
-  gem 'quiet_assets'
-  gem 'rails_layout'
-end
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-end
-group :production do
-  gem 'thin'
-end
-group :test do
-  gem 'capybara'
-  gem 'cucumber-rails', :require=>false
-  gem 'database_cleaner', '1.0.1'
-  gem 'email_spec'
-  gem 'launchy'
-end
+gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
+gem "email_spec", ">= 1.2.1", :group => :test
+gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
+gem "database_cleaner", ">= 0.9.1", :group => :test
+gem "launchy", ">= 2.1.2", :group => :test
+gem "capybara", ">= 1.1.2", :group => :test
+gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
+gem "bootstrap-sass", ">= 2.1.0.0"
+gem "devise", ">= 2.1.2"
+gem "cancan", ">= 1.6.8"
+gem "rolify", ">= 3.2.0"
+gem "simple_form", ">= 2.0.4"
+gem "quiet_assets", ">= 1.0.1", :group => :development
+gem "better_errors", ">= 0.0.8", :group => :development
+gem "binding_of_caller", ">= 0.6.8", :group => :development
+gem "stripe"
+gem "stripe_event"
