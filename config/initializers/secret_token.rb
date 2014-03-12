@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RailsStripeMembershipSaas::Application.config.secret_key_base = 'd0b7b364a1f0e40204019d27e1db07758befb947c28590d4ff9108c20a2869ad9e3697c6e2f8ab73afc5f1310df812ceee4678405846151382b74cdc85f1749e'
+RailsStripeMembershipSaas::Application.config.secret_key_base = 'b0b610ff62859b147f5ccb27e1972028cbc473c806f799cc56bd8270a2215dd9ac724a481238c19194ea4df56cc539dfdd31fdaf163a283f4535ac279f037280'
