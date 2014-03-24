@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
+  def update_stripe
+    return if email.include?(ENV['ADMIN_EMAIL'])
+    return if email.include?('@example.com') and not Rails.env.production?
+  end
 end
